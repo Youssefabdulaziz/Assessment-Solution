@@ -94,6 +94,17 @@ export const teamsRelations = relations(teams, ({ one }) => ({
   }),
 }));
 
+
+export const plans = sqliteTable("plans", {
+  id: integer("id").primaryKey().notNull(),
+  name: text("name").notNull(),
+  description: text("description"),
+  price: integer("price").notNull(),
+  duration: integer("duration").notNull(), // duration in days
+  createdAt: text("createdAt").notNull(), // ISO string
+  updatedAt: text("updatedAt").notNull(), // ISO string
+});
+
 // export const plans = sqliteTable("plans", {
 // todo: add plans table schema
 // });
