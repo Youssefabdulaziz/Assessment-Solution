@@ -80,4 +80,8 @@ If you were to introduce two more props to plans:
 How would this affect the current plan upgrade calculation?
 
 ### answer here:
----
+To declare the defaultUsers and pricePerUser properties to the plans and adjust the prorated upgrade price calculation:
+
+1- Schema Changes: add defaultUsers and pricePerUser to plans table.
+2- Model Adjustments: update createPlan, updatePlan, and calculateProratedPrice.
+3- Router Changes: update router to include new properties in the procedures and update the calculateProratedPrice method to consider additionalUsers.
